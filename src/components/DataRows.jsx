@@ -9,6 +9,7 @@ return (
     <div className="cell"><p>{item.skrydzio_nr}</p></div>
     <div className="cell"><p>{statusas}</p></div>
     <div className="cell"><p>{item.airline}</p></div>
+    <div className="cell"><button className="green-button" title="Paspauskite įrašo redagavimui">&#8681;</button><button className="red-button" title="Įrašo trynimo mygtukas">X</button></div>
     </>
 )
 }

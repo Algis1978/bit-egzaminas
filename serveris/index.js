@@ -43,3 +43,20 @@ app.get('/planes', (req, res) => {
     else {res.send(results);console.log(results)}
     }) 
 })
+//Duomenų įvedimas//
+app.post('/planes', (req, res) => {
+    const sqlParaiska = `insert into planes
+    (from_town, airline, arrival_time, is_late, skrydzio_nr) 
+    values (?, ?, ?, ?, ?)`
+    sasaja.query(sqlParaiska, [
+    //Čia surašomos savybės tokia pačia tvarka, kokia yra užklausa
+    req.body.from_town,
+    req.body.airline,
+    req.body.arrival_time,
+    req.body.is_late,
+    req.body.skrydzio_nr
+    ], (err, results) => {
+    if (err) {throw err}
+    else {res.send(results)}
+    })
+})

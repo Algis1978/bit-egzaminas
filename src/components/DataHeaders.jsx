@@ -1,12 +1,12 @@
 export default function DataHeaders () {
     return (
-    <div className="row-data row-header">
-        <div className="heading">Laikas</div>
-        <div className="heading">Išvykimo miestas</div>
-        <div className="heading">Skrydžio numeris</div>
-        <div className="heading">Būsena</div>
-        <div className="heading">Oro bendrovė</div>
-        <div className="heading veiksmai">Veiksmai</div>
-    </div>
+    <>
+    <div className="heading"><p>Laikas</p></div>
+    <div className="heading"><p>Išvykimo miestas</p></div>
+    <div className="heading"><p>Skrydžio nr.</p></div>
+    <div className="heading"><p>Būsena</p></div>
+    <div className="heading"><p>Oro bendrovė, km</p></div>
+    <div className="heading veiksmai">Veiksmai</div>
+    </>
     )
 }

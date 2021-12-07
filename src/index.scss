@@ -5,9 +5,6 @@ body {
   background-color: khaki;
   transition:2s;
 }
-button {
-  font-family: 'Source Sans Pro', sans-serif; 
-}
 body * {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: normal;
@@ -33,12 +30,66 @@ button {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder; 
 }
+input {
+  outline-color: bisque;
+}
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   padding:6px;
   background-color: rgb(46, 80, 93);
   color:white;
+  button {
+    width:fit-content;
+  }
+  .cell {
+    border: 1px solid rgb(152, 152, 152);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:4px 2px;
+  }
+  .heading {
+    display:flex;
+    padding:4px 2px;
+    justify-content: center;
+    align-items: center;
+  }
+  .first-cell {
+    justify-content: left;
+    align-items: left;
+  }
+  a:hover {
+    color: skyblue;
+    cursor: pointer;
+  }
+  .edit-cell{
+    background-color: rgb(46, 109, 132);
+    border:none;
+    padding-bottom: 16px;
+    
+  }
+  input{
+    height:12px;
+    padding:3px 2px;
+    border:none;
+    width:90%;
+    color:black;
+  }
+  .check {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:85px;
+  }
 }
+.panele {
+  text-align:right;
+  padding:4px;
+}
+.ivedimas {
+  background-color: rgb(46, 109, 132);
+}
+
 
