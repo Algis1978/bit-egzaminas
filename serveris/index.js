@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 const sasaja = mysql.createConnection({
     host: "localhost",
     user: "root",
-    database: "paspirtukai",
+    database: "oro_uostas",
     password: "root"
 });
 
@@ -32,4 +32,14 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.get('/JSONtestas', (req, res) => {
     res.send(JSON.stringify({JSONtestas: 'JSON tekstas perskaitytas sėkmingai'}))
+})
+
+///Duomenų atsisiuntimas///
+
+app.get('/planes', (req, res) => {
+    const sqlUzklausa = `select * from planes`
+    sasaja.query(sqlUzklausa, (err, results) =>{
+    if (err) {throw err}
+    else {res.send(results);console.log(results)}
+    }) 
 })
