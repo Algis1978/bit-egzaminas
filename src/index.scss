@@ -45,6 +45,8 @@ input {
   padding:6px;
   background-color: rgb(46, 80, 93);
   color:white;
+  max-width: 1100px;
+  margin:auto;
   button {
     width:fit-content;
   }
@@ -96,6 +98,42 @@ input {
 .ivedimas {
   background-color: rgb(46, 109, 132);
 }
-
+@media only screen and (max-width: 750px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .row-data {
+    display: block;
+    font-size:0.8rem;
+    margin:2px 2px;
+    .first-cell {
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+    width:fit-content;
+    font-size: 0.8rem;
+    }
+  }
+  .row-header{
+    display:none;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
 
 

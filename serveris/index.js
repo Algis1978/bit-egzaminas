@@ -88,3 +88,19 @@ app.delete('/planes:id', (req, res) => {
     else {res.send(results)}
     }) 
 })
+
+////Įrašų suskaičiavimas/statistika////
+app.get('/planes/count=all', (req, res) => {
+    const sqlUzklausa = `SELECT count( * ) as visi_skrydziai FROM planes`
+    sasaja.query(sqlUzklausa, (err, results) =>{
+    if (err) {throw err}
+    else {res.send(results[0]);}
+    }) 
+})
+app.get('/planes/laiku', (req, res) => {
+    const sqlUzklausa = `SELECT count(*) as laiku_skrydziai FROM planes WHERE is_late=0`
+    sasaja.query(sqlUzklausa, (err, results) =>{
+    if (err) {throw err}
+    else {res.send(results[0]);}
+    }) 
+})

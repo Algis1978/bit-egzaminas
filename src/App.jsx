@@ -3,6 +3,7 @@ import axios from "axios";
 import DataRows from "./components/DataRows";
 import DataHeaders from "./components/DataHeaders";
 import IvedimoForma from "./components/IvedimoForma";
+import Veiksmai from "./components/Veiksmai";
 
 function App() {
   ////Atsisiunčiami visi įrašai////
@@ -37,13 +38,29 @@ const pakeisti = (keiciamiDuomenys, id) => {
     setAtnaujinti(Date.now());
      })
     }
+///Atsisiunčiama statistika///
 
+const [skrydziuSkaicius, setSkrydziuSkaicius] = useState({})
+useEffect( () => {
+  axios.get('http://localhost:3012/planes/count=all')
+  .then (res => {
+      setSkrydziuSkaicius(res.data);
+  })
+}, [atnaujinti])
+const [laikuSkrydziai, setLaikuSkrydziai] = useState({})
+useEffect( () => {
+  axios.get('http://localhost:3012/planes/laiku')
+  .then (res => {
+      setLaikuSkrydziai(res.data);
+  })
+}, [atnaujinti])
   return (
     <>
     <div className="antraste">
       <h1>Skrydžių atvykimo tvarkaraštis</h1>
     </div>
     <IvedimoForma sukurti={sukurti}></IvedimoForma>
+    <Veiksmai skrydziuSkaicius={skrydziuSkaicius} laikuSkrydziai={laikuSkrydziai}></Veiksmai>
     <div className="container">
       <DataHeaders/>
       {visiSkrydziai.map( item => <DataRows key={item.id} item={item} pakeisti={pakeisti} istrinti={istrinti}/>)}
