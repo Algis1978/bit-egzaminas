@@ -60,3 +60,31 @@ app.post('/planes', (req, res) => {
     else {res.send(results)}
     })
 })
+///Atskiro įrašo redagavimas///
+app.put('/planes:id', (req, res) => {
+    const sqlParaiska = `
+    update planes
+    set arrival_time=?, is_late=?
+    where id=?
+    `
+    sasaja.query(sqlParaiska, [
+    req.body["arrival_time"],
+    req.body["is_late"],
+    req.params["id"]
+    ], (err, results) => {
+    if (err) {throw err}
+    else {res.send(results)}
+    }) })
+////Atskiro įrašo trynimas pagal id////
+app.delete('/planes:id', (req, res) => {
+    const sqlParaiska = `
+    delete from planes
+    where id=?
+    `
+    sasaja.query(sqlParaiska, [
+    req.params.id
+    ], (err, results) => {
+    if (err) {throw err}
+    else {res.send(results)}
+    }) 
+})

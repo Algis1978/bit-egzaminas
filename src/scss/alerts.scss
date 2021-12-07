@@ -1,0 +1,47 @@
+.istrinti-forma {
+    grid-column: 1 / 7;
+    animation-name: init;
+    animation-fill-mode: forwards;
+    animation-duration: 0.6s;
+    // position: absolute;
+    // left:0px;
+    // right: 0px;
+}
+.alert-box {
+    padding: 4px;
+    border: 4px double gold;
+    border-radius: 12px;
+    width:80%;
+    max-width: 480px;
+    margin:auto;
+    background-color: rgba(121, 67, 28, 0.66);
+}
+.alert-buttons {
+    text-align:center;
+    button {
+        margin:2px;
+    }
+}
+.istrinti-forma h1  {
+    margin:6px;
+    text-align: center;
+    animation-name: alert;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+.istrinti-forma h3 {
+    text-align: center;
+    color: aquamarine;
+}
+@keyframes alert {
+    0% {
+        color:red;
+    }
+    50% {
+        color:yellow;
+    }
+    100% {
+        color:red;
+        
+    }
+}

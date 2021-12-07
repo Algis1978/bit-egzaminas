@@ -29,7 +29,10 @@ export default function IvedimoForma ( {sukurti}) {
     }
 
     return (
+        <>
+        
         <div className="container ivedimas">
+        <div><h2>Naujas skrydis</h2></div>
             <div className="cell"><input type="text" placeholder="Išvykimo miestas" value={skrydis.from_town} onChange={(e) => formControl(e, "from_town")}/></div>
 
             <div className="cell"><input type="text" placeholder="Oro bendrovė" value={skrydis.airline} onChange={(e) => formControl(e, "airline")}/></div>
@@ -40,5 +43,6 @@ export default function IvedimoForma ( {sukurti}) {
 
             <div className="cell"><button className="yellow-button" title="Paspauskite įrašo įvedimui" onClick= {handleSukurti}>Įveskite</button></div>
         </div>
+        </>
     )
 }

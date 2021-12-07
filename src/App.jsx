@@ -23,6 +23,20 @@ const sukurti = skrydis => {
   setAtnaujinti(Date.now());
   }) 
 }
+///Redagavimo funkcijos susikūrimas///
+const pakeisti = (keiciamiDuomenys, id) => {
+  axios.put('http://localhost:3012/planes'+id, keiciamiDuomenys)
+  .then (res => {
+  setAtnaujinti(Date.now());
+   })
+  }
+  ///Trynimo funkcijos susikūrimas///
+  const istrinti = (id) => {
+    axios.delete('http://localhost:3012/planes'+id)
+    .then (res => {
+    setAtnaujinti(Date.now());
+     })
+    }
 
   return (
     <>
@@ -32,7 +46,7 @@ const sukurti = skrydis => {
     <IvedimoForma sukurti={sukurti}></IvedimoForma>
     <div className="container">
       <DataHeaders/>
-      {visiSkrydziai.map( item => <DataRows key={item.id} item={item}/>)}
+      {visiSkrydziai.map( item => <DataRows key={item.id} item={item} pakeisti={pakeisti} istrinti={istrinti}/>)}
     </div>
     </>
   );
