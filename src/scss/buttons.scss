@@ -1,0 +1,59 @@
+button {
+    outline-color: #df9916;
+    font-size:1rem;
+    text-shadow: 1px 1px black;
+    padding:2px 12px;
+}
+.yellow-button {
+    background-color: darkorange;
+    background-image: linear-gradient(90deg, rgb(213, 176, 31), rgb(226, 153, 17));
+    color: cornsilk;
+    border-radius: 12px;
+    border: 1px solid rgb(255, 225, 0);
+}
+.yellow-button:hover {
+    background-color: rgb(179, 143, 23);
+    background-image: linear-gradient(90deg, rgb(224, 218, 58), rgb(184, 153, 17));
+    cursor:pointer;
+}
+.red-button {
+    background-color: rgb(208, 26, 26);
+    background-image: linear-gradient(90deg, rgb(218, 27, 27), rgb(182, 42, 42));
+    border: 1px solid red;
+    border-radius: 12px;
+}
+.red-button:hover {
+    background-image: linear-gradient(90deg, rgb(248, 173, 10), rgb(245, 32, 12));
+    cursor:pointer;
+}
+.green-button {
+    background-color: rgb(30, 137, 24);
+    background-image: linear-gradient(90deg, rgb(89, 130, 42)rgb(12, 167, 17));
+    border: 1px solid green;
+    border-radius: 12px;
+}
+.green-button:hover {
+    background-color: rgb(29, 240, 17);
+    background-image: linear-gradient(90deg, rgb(130, 209, 40),rgb(11, 196, 17));
+    cursor:pointer;
+}
+.blue-button {
+    background-color: rgb(26, 36, 142);
+    background-image: linear-gradient(90deg, rgb(47, 47, 140), rgb(17, 14, 99));
+    border: 1px solid rgb(6, 83, 193);
+    border-radius: 12px;
+}
+.blue-button:hover {
+    background-image: linear-gradient(90deg, rgb(53, 53, 199), rgb(17, 12, 172));
+    cursor:pointer;
+}
+.violet-button {
+    background-color: rgb(147, 49, 147);
+    background-image: linear-gradient(90deg, rgb(95, 25, 99), rgb(123, 18, 137));
+    border: 1px solid violet;
+    border-radius: 12px;
+}
+.violet-button:hover {
+    background-image: linear-gradient(90deg,  rgb(132, 38, 137), rgb(156, 10, 175));
+    cursor:pointer;
+}

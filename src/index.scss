@@ -1,0 +1,17 @@
+@import "./scss/buttons.scss";
+body {
+  background-color: khaki;
+  transition:3s;
+  animation-name: init;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes init {
+  0%{
+    opacity: 20%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+

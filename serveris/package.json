@@ -1,0 +1,18 @@
+{
+  "name": "bit-egzaminas",
+  "version": "1.0.0",
+  "description": "\"BIT egzamino programa\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "\"Programa veikia\""
+  },
+  "author": "Algirdas Navickas",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15"
+  }
+}
